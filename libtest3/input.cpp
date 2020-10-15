@@ -6,7 +6,7 @@ using namespace cv;
 
 void showLog() {
 
-    int keyPressed = waitKey(10);
+    int keyPressed = waitKey(1);
     if (103 == keyPressed) {
         cout << "G! ";
     }
@@ -14,7 +14,7 @@ void showLog() {
 }
 
 int closeApp() {
-    if (waitKey(10) == 27)
+    if (waitKey(1) == 27)
         return 1;
     else
         return 0;

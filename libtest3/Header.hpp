@@ -7,5 +7,11 @@
 #include <fstream>
 #include <stdio.h>
 #include <time.h>
+
 std::ofstream createLog();
-void addToLog(std::ofstream log, int nbr);
+void addToLog(std::ofstream& log, int nbr);// , int nbr);
+
+int closeApp();
+void showLog();
+
+float average();

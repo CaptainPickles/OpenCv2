@@ -148,6 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="input.cpp" />
     <ClCompile Include="source.cpp" />
     <ClCompile Include="opencv.cpp" />
   </ItemGroup>

@@ -1,7 +1,7 @@
 #include "Header.hpp"
 using namespace std;
 using namespace cv;
-void detectAndDisplay(Mat frame);
+void detectAndDisplay(Mat frame, ofstream& logFile);
 CascadeClassifier face_cascade;
 CascadeClassifier eyes_cascade;
 int main(int argc, const char** argv)
@@ -49,32 +49,36 @@ int main(int argc, const char** argv)
             break;
         }
         //-- 3. Apply the classifier to the frame
-        detectAndDisplay(frame);
-        logFile.close();
-        if (waitKey(10) == 27)
-        {
-            break; // escape
-        }
+        detectAndDisplay(frame, logFile);
+        
+        if (closeApp() == 1)
+            break;
     }
+    logFile << "La moyenne est de :  " << average();
+    logFile.close();
+
     return 0;
 }
-void detectAndDisplay(Mat frame)
+void detectAndDisplay(Mat frame, ofstream& log)
 {
     Mat frame_gray;
     cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
     equalizeHist(frame_gray, frame_gray);
     //-- Detect faces
     std::vector<Rect> faces;
-    face_cascade.detectMultiScale(frame_gray, faces , 1.2);
+    face_cascade.detectMultiScale(frame_gray, faces, 1.2);
     std::string nbrFaces = std::to_string(faces.size());
     std::string pers = "personne";
-    //addToLog(logFile,faces.size() );
+
+    addToLog(log , faces.size());// , faces.size() );
+
     if (faces.size() > 1) {
         pers = "personnes";
     }
     else {
         pers = "personne";
     }
+
     std::string textFaces = "Il y a actuellement : " + nbrFaces + " " + pers;
     putText(frame, textFaces, cv::Point(200, 450),
         FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(0, 0, 0), 2, 8);
@@ -85,7 +89,7 @@ void detectAndDisplay(Mat frame)
         Mat faceROI = frame_gray(faces[i]);
         //-- In each face, detect eyes
         std::vector<Rect> eyes;
-        eyes_cascade.detectMultiScale(faceROI, eyes , 1.2 );
+        eyes_cascade.detectMultiScale(faceROI, eyes, 1.2);
         if (eyes.size() >= 2) {
             putText(frame, "Les deux yeux sont ouverts !", cv::Point(30, 30),
                 FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(0, 255, 0), 1, 8);
