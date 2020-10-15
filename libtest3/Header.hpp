@@ -7,5 +7,9 @@
 #include <fstream>
 #include <stdio.h>
 #include <time.h>
+
 std::ofstream createLog();
 void addToLog(std::ofstream log, int nbr);
+
+int closeApp();
+void showlog();

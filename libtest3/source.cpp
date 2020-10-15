@@ -1,6 +1,6 @@
 #include "Header.hpp"
 using namespace std;
-#pragma warning(disable : 4996);
+#pragma warning(disable : 4996)
 
 
 ofstream createLog() {

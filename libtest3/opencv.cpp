@@ -51,10 +51,8 @@ int main(int argc, const char** argv)
         //-- 3. Apply the classifier to the frame
         detectAndDisplay(frame);
         logFile.close();
-        if (waitKey(10) == 27)
-        {
-            break; // escape
-        }
+        if(closeApp() == 1)
+            break;
     }
     return 0;
 }
@@ -75,6 +73,9 @@ void detectAndDisplay(Mat frame)
     else {
         pers = "personne";
     }
+   
+    ///////////////////////////////////////FIXE NEEDED
+
     std::string textFaces = "Il y a actuellement : " + nbrFaces + " " + pers;
     putText(frame, textFaces, cv::Point(200, 450),
         FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(0, 0, 0), 2, 8);
