@@ -1,6 +1,6 @@
 #include "Header.hpp"
 using namespace std;
-#pragma warning(disable : 4996);
+#pragma warning(disable : 4996)
 
 
 ofstream createLog() {
@@ -12,6 +12,7 @@ ofstream createLog() {
 	return log;
 }
 
-void addToLog(ofstream log ,int nbr) {
-
+void addToLog(ofstream& log)// , int nbr) 
+{
+	std::cout << "ergerdgfrf";
 }
