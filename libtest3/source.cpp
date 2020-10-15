@@ -7,8 +7,11 @@ void testAfficher(std::string s){
 
 ofstream createLog() {
 	ofstream log("log.txt");
-	log << "Creation du fichier log \n";
-    log << localtime_s;
+
+	time_t _tm = time(NULL);
+	struct tm* curtime = localtime(&_tm);
+	log << "Log of " << asctime(curtime);
+
 	return log;
 }
 
