@@ -7,8 +7,8 @@ void testAfficher(std::string s){
 
 ofstream createLog() {
 	ofstream log("log.txt");
-	log << "Creation du fichier log";
-
+	log << "Creation du fichier log \n";
+    log << localtime_s;
 	return log;
 }
 

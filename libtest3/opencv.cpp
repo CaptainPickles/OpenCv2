@@ -33,6 +33,8 @@ int main(int argc, const char** argv)
     capture.set(CAP_PROP_FRAME_WIDTH, 1);
     capture.set(CAP_PROP_FRAME_HEIGHT, 1);
     capture.open(camera_device);
+    std::ofstream logFile = createLog();
+    logFile.close();
     if (!capture.isOpened())
     {
         cout << "--(!)Error opening video capture\n";
