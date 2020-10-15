@@ -1,1 +1,2 @@
-Creation du fichier log 
+Create log file from : Thu Oct 15 12:35:40 2020
+

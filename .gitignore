@@ -8,3 +8,9 @@ Browse.VC.db
 x64/
 libtest3.sln
 .vs/
+log.txt
+CppProperties.json
+OpenCv2.sln
+OpenCv2.vcxproj
+OpenCv2.vcxproj.filters
+OpenCv2.vcxproj.user

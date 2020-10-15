@@ -7,6 +7,5 @@
 #include <fstream>
 #include <stdio.h>
 #include <time.h>
-void testAfficher(std::string s);
 std::ofstream createLog();
 void addToLog(std::ofstream log, int nbr);
