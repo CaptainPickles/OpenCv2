@@ -1,7 +1,7 @@
 #include "Header.hpp"
 using namespace std;
 using namespace cv;
-void detectAndDisplay(Mat frame);
+void detectAndDisplay(Mat frame, ofstream& logFile);
 CascadeClassifier face_cascade;
 CascadeClassifier eyes_cascade;
 int main(int argc, const char** argv)
@@ -34,7 +34,7 @@ int main(int argc, const char** argv)
     capture.set(CAP_PROP_FRAME_HEIGHT, 1);
     capture.open(camera_device);
     //create log file
-    std::ofstream logFile = createLog();
+    std::ofstream& logFile = createLog();
     if (!capture.isOpened())
     {
         cout << "--(!)Error opening video capture\n";
@@ -49,14 +49,14 @@ int main(int argc, const char** argv)
             break;
         }
         //-- 3. Apply the classifier to the frame
-        detectAndDisplay(frame);
+        detectAndDisplay(frame, logFile);
         logFile.close();
         if(closeApp() == 1)
             break;
     }
     return 0;
 }
-void detectAndDisplay(Mat frame)
+void detectAndDisplay(Mat frame, ofstream& log)
 {
     Mat frame_gray;
     cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
@@ -66,7 +66,9 @@ void detectAndDisplay(Mat frame)
     face_cascade.detectMultiScale(frame_gray, faces , 1.2);
     std::string nbrFaces = std::to_string(faces.size());
     std::string pers = "personne";
-    //addToLog(logFile,faces.size() );
+    
+    addToLog(log);// , faces.size() );
+    
     if (faces.size() > 1) {
         pers = "personnes";
     }

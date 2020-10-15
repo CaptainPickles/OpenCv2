@@ -12,6 +12,7 @@ ofstream createLog() {
 	return log;
 }
 
-void addToLog(ofstream log ,int nbr) {
-
+void addToLog(ofstream& log)// , int nbr) 
+{
+	std::cout << "ergerdgfrf";
 }
