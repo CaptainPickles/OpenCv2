@@ -1,0 +1,10 @@
+Browse.VC.opendb
+Browse.VC.db-wal
+Browse.VC.db-shm
+Browse.VC
+Browse.VC.db
+.suo
+*vxcproj
+x64/
+libtest3.sln
+.vs/
