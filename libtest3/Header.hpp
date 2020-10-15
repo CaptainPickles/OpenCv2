@@ -7,6 +7,6 @@
 #include <fstream>
 #include <stdio.h>
 #include <time.h>
+
 std::ofstream createLog();
-void addToLog(std::ofstream log, int nbr);
-void addStringLog(std::ofstream log, std::string txt);
+void addToLog(std::ofstream& log);// , int nbr);
