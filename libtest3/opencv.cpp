@@ -33,8 +33,8 @@ int main(int argc, const char** argv)
     capture.set(CAP_PROP_FRAME_WIDTH, 1);
     capture.set(CAP_PROP_FRAME_HEIGHT, 1);
     capture.open(camera_device);
+    //create log file
     std::ofstream logFile = createLog();
-    logFile.close();
     if (!capture.isOpened())
     {
         cout << "--(!)Error opening video capture\n";
@@ -50,6 +50,7 @@ int main(int argc, const char** argv)
         }
         //-- 3. Apply the classifier to the frame
         detectAndDisplay(frame);
+        logFile.close();
         if (waitKey(10) == 27)
         {
             break; // escape
@@ -67,6 +68,7 @@ void detectAndDisplay(Mat frame)
     face_cascade.detectMultiScale(frame_gray, faces , 1.2);
     std::string nbrFaces = std::to_string(faces.size());
     std::string pers = "personne";
+    //addToLog(logFile,faces.size() );
     if (faces.size() > 1) {
         pers = "personnes";
     }
