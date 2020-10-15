@@ -1,9 +1,9 @@
 #include "Header.hpp"
 using namespace std;
 using namespace cv;
-void detectAndDisplay(Mat frame);
 CascadeClassifier face_cascade;
 CascadeClassifier eyes_cascade;
+void detectAndDisplay(Mat frame);
 int main(int argc, const char** argv)
 {
     CommandLineParser parser(argc, argv,
@@ -34,7 +34,8 @@ int main(int argc, const char** argv)
     capture.set(CAP_PROP_FRAME_HEIGHT, 1);
     capture.open(camera_device);
     //create log file
-    std::ofstream logFile = createLog();
+    ofstream logFile = createLog();
+    addStringLog(logFile, "test");
     if (!capture.isOpened())
     {
         cout << "--(!)Error opening video capture\n";
@@ -68,7 +69,6 @@ void detectAndDisplay(Mat frame)
     face_cascade.detectMultiScale(frame_gray, faces , 1.2);
     std::string nbrFaces = std::to_string(faces.size());
     std::string pers = "personne";
-    //addToLog(logFile,faces.size() );
     if (faces.size() > 1) {
         pers = "personnes";
     }

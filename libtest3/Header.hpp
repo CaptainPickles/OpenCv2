@@ -9,3 +9,4 @@
 #include <time.h>
 std::ofstream createLog();
 void addToLog(std::ofstream log, int nbr);
+void addStringLog(std::ofstream log, std::string txt);

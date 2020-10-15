@@ -12,6 +12,12 @@ ofstream createLog() {
 	return log;
 }
 
-void addToLog(ofstream log ,int nbr) {
+void addStringLog(ofstream log, string txt) {
+	log << "Create log file from :  \n";
+}
 
+void addToLog(ofstream log ,int nbr) {
+	time_t _tm = time(NULL);
+	struct tm* curtime = localtime(&_tm);
+	log << "there is : " << nbr << " people on the cam at " << asctime(curtime) << "\n";
 }
