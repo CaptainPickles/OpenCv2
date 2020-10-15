@@ -50,10 +50,12 @@ int main(int argc, const char** argv)
         }
         //-- 3. Apply the classifier to the frame
         detectAndDisplay(frame, logFile);
-        logFile.close();
+        
         if (waitKey(1) == 27)
             break;
     }
+    logFile.close();
+
     return 0;
 }
 void detectAndDisplay(Mat frame, ofstream& log)
@@ -67,7 +69,7 @@ void detectAndDisplay(Mat frame, ofstream& log)
     std::string nbrFaces = std::to_string(faces.size());
     std::string pers = "personne";
 
-    addToLog(log);// , faces.size() );
+    addToLog(log , faces.size());// , faces.size() );
 
     if (faces.size() > 1) {
         pers = "personnes";
