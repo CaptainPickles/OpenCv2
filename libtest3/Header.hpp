@@ -13,3 +13,5 @@ void addToLog(std::ofstream& log, int nbr);// , int nbr);
 
 int closeApp();
 void showLog();
+
+float average();
