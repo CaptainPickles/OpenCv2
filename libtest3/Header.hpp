@@ -11,7 +11,7 @@
 
 std::ofstream createLog();
 void addToLog(std::ofstream& log, int nbr);// , int nbr);
-
+std::string returnFaceToString(int nbr);
 int closeApp();
 void showLog();
 

@@ -2,7 +2,6 @@
 using namespace std;
 using namespace cv;
 #pragma warning(disable : 4996)
-
 void detectAndDisplay(Mat frame, ofstream& logFile);
 CascadeClassifier face_cascade;
 int main(int argc, const char** argv)
@@ -24,8 +23,6 @@ int main(int argc, const char** argv)
     int camera_device = parser.get<int>("camera");
     VideoCapture capture(0);
     //-- 2. Read the video stream
-    capture.set(CAP_PROP_FRAME_WIDTH, 1);
-    capture.set(CAP_PROP_FRAME_HEIGHT, 1);
     capture.open(camera_device);
     //create log file
     std::ofstream logFile = createLog();
@@ -68,19 +65,11 @@ void detectAndDisplay(Mat frame, ofstream& log)
     //-- Detect faces
     std::vector<Rect> faces;
     face_cascade.detectMultiScale(frame_gray, faces, 1.3);
-    std::string nbrFaces = std::to_string(faces.size());
-    std::string pers = "personne";
+    std::string nbrFaces = "";
+    nbrFaces = returnFaceToString(faces.size());
 
     addToLog(log, faces.size());// , faces.size() );
-    if (faces.size() > 1) {
-        pers = "personnes";
-    }
-    else {
-        pers = "personne";
-    }
-
-    std::string textFaces = "Il y a actuellement : " + nbrFaces + " " + pers;
-    putText(frame, textFaces, cv::Point(200, 450),
+    putText(frame, nbrFaces, cv::Point(200, 450),
         FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(0, 0, 0), 2, 8);
     for (size_t i = 0; i < faces.size(); i++)
     {

@@ -40,6 +40,20 @@ void addToLog(ofstream& log, int nbr)// , int nbr)
     }
 }
 
+string returnFaceToString(int nbr) {
+    std::string nbrFaces = std::to_string(nbr);
+    std::string pers = "personne";
+    if (nbr > 1) {
+        pers = "personnes";
+    }
+    else {
+        pers = "personne";
+    }
+
+    std::string textFaces = "Il y a actuellement : " + nbrFaces + " " + pers;
+    return textFaces;
+}
+
 string average(string dateBegin) {
     string x = "d";
     if (avg == 0) {
