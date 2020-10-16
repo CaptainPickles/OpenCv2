@@ -12,7 +12,7 @@ ofstream createLog() {
     return log;
 }
 
-void addToLog(ofstream& log , int nbr )// , int nbr) 
+void addToLog(ofstream& log, int nbr)// , int nbr) 
 {
     time_t _tm = time(NULL);
     struct tm* curtime = localtime(&_tm);
