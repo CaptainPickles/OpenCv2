@@ -1,42 +1,10 @@
-Create log file from : Fri Oct 16 14:19:20 2020
+Create log file from : Fri Oct 16 14:21:42 2020
 
 
-there is : 0 people on the cam at Fri Oct 16 14:19:23 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:23 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:23 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:23 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:24 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:24 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:24 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:24 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:24 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:24 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:25 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:25 2020
-there is : 0 people on the cam at Fri Oct 16 14:19:25 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:25 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:25 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:26 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:26 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:26 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:26 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:27 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:27 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:27 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:27 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:28 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:28 2020
-there is : 2 people on the cam at Fri Oct 16 14:19:28 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:28 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:29 2020
-there is : 2 people on the cam at Fri Oct 16 14:19:29 2020
-there is : 2 people on the cam at Fri Oct 16 14:19:29 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:30 2020
-there is : 2 people on the cam at Fri Oct 16 14:19:30 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:30 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:30 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:31 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:31 2020
-there is : 1 people on the cam at Fri Oct 16 14:19:31 2020
-average : 1.250000 maximun face at a time : 2.000000 face detected : 28.000000 between Fri Oct 16 14:19:20 2020
- and Fri Oct 16 14:19:31 2020
+there is : 0 people on the cam at Fri Oct 16 14:21:42 2020
+there is : 0 people on the cam at Fri Oct 16 14:21:43 2020
+there is : 0 people on the cam at Fri Oct 16 14:21:43 2020
+there is : 0 people on the cam at Fri Oct 16 14:21:43 2020
+there is : 0 people on the cam at Fri Oct 16 14:21:43 2020
+there is : 0 people on the cam at Fri Oct 16 14:21:43 2020
+pas de probleme juste flememe
