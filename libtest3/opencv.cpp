@@ -1,6 +1,7 @@
 #include "Header.hpp"
 using namespace std;
 using namespace cv;
+
 void detectAndDisplay(Mat frame, ofstream& logFile);
 CascadeClassifier face_cascade;
 int main(int argc, const char** argv)
@@ -27,6 +28,13 @@ int main(int argc, const char** argv)
     capture.open(camera_device);
     //create log file
     std::ofstream logFile = createLog();
+
+    string dateBegin = "e";
+    string dateEnd = "e";
+    time_t _tm = time(NULL);
+    struct tm* curtime = localtime(&_tm);
+    dateBegin = asctime(curtime);
+
     if (!capture.isOpened())
     {
         cout << "--(!)Error opening video capture\n";
@@ -45,7 +53,8 @@ int main(int argc, const char** argv)
         if (closeApp() == 1)
             break;
     }
-    logFile << "La moyenne est de :  " << average();
+
+    logFile << average(dateBegin);
     logFile.close();
 
     return 0;

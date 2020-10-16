@@ -7,6 +7,7 @@
 #include <fstream>
 #include <stdio.h>
 #include <time.h>
+#include <string>
 
 std::ofstream createLog();
 void addToLog(std::ofstream& log, int nbr);// , int nbr);
@@ -14,4 +15,4 @@ void addToLog(std::ofstream& log, int nbr);// , int nbr);
 int closeApp();
 void showLog();
 
-float average();
+std::string average(std::string dateBegin);
