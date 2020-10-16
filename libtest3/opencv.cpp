@@ -1,6 +1,7 @@
 #include "Header.hpp"
 using namespace std;
 using namespace cv;
+#pragma warning(disable : 4996)
 
 void detectAndDisplay(Mat frame, ofstream& logFile);
 CascadeClassifier face_cascade;
